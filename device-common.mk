@@ -141,3 +141,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Set thermal warm reset
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.thermal_warmreset = true \
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    device/google/crosshatch/prebuilts/sec_touch.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/sec_touch.ko \
+    device/google/crosshatch/prebuilts/ftm5.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/ftm5.ko \
+    device/google/crosshatch/prebuilts/heatmap.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/heatmap.ko \
+    device/google/crosshatch/prebuilts/videobuf2-memops.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/videobuf2-memops.ko \
+    device/google/crosshatch/prebuilts/videobuf2-vmalloc.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/videobuf2-vmalloc.ko \
+    device/google/crosshatch/prebuilts/touchdriver.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/touchdriver.sh \
+    device/google/coral/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
