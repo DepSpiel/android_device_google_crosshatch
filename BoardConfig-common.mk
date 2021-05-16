@@ -100,6 +100,15 @@ TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_pixel \
     libfstab
 
+TARGET_RECOVERY_TWRP_LIB := \
+    librecovery_twrp_crosshatch \
+    libnos_citadel_for_recovery \
+    libnos_for_recovery \
+    liblog \
+    libbootloader_message \
+    libfstab \
+    libext4_utils
+
 ifneq ($(filter %_mainline,$(TARGET_PRODUCT)),)
 BOARD_AVB_VBMETA_SYSTEM := system system_ext
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
